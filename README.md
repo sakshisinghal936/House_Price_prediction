@@ -1,6 +1,3 @@
-# House_Price_prediction
-House Price Prediction using Machine Learning — explores Linear Regression, Ridge, Lasso, Decision Trees, Random Forests, Gradient Boosting &amp; XGBoost with feature engineering, and cross-validation for accurate house price estimation.
-
 # 🏡 House Price Prediction with Machine Learning
 
 This project explores **predictive modeling for house prices** using multiple machine learning techniques.  
