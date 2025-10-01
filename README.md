@@ -8,15 +8,13 @@ The goal is to build, evaluate, and compare models that can accurately estimate 
 🚀 Project Workflow
 1. Data Preprocessing
 
-Handling missing values
+Handle missing values & duplicates
 
-Removing duplicates
+Outlier detection and treatment (IQR, domain rules)
 
-Outlier detection & treatment (IQR, domain rules)
+Encode categorical features (city, statezip, street)
 
-Encoding categorical features (city, statezip, street)
-
-Feature scaling for linear models (StandardScaler)
+Feature scaling for linear models
 
 2. Feature Engineering
 
@@ -34,7 +32,7 @@ Target encoding for high-cardinality categorical columns (city)
 
 Correlation-threshold filtering → drops highly correlated features
 
-Recursive Feature Elimination (RFE, RFECV) → model-based feature ranking
+Recursive Feature Elimination (RFE/RFECV) → model-based feature ranking
 
 Comparison of “all features” vs “selected features”
 
@@ -74,15 +72,15 @@ Train vs Test comparison to check overfitting
 
 📊 Experiments & Insights
 
-Linear vs Regularized models → Ridge handled multicollinearity better, Lasso helped feature selection.
+Ridge handled multicollinearity better, Lasso helped feature selection.
 
-Decision Tree → Overfit heavily; pruning improved but still weaker.
+Decision Tree overfit heavily; pruning improved but still weaker.
 
-Random Forest & Gradient Boosting → Much stronger performance, reduced variance.
+Random Forest & Gradient Boosting gave stronger results.
 
-XGBoost → Comparable to Gradient Boosting; faster & more regularized.
+XGBoost performed comparably to Gradient Boosting, with faster training and better regularization.
 
-Feature Selection → RFE + correlation filtering improved model interpretability without much loss in accuracy.
+Feature selection (Correlation + RFE) improved interpretability without large accuracy loss.
 
 ⚙️ Tech Stack
 
@@ -92,8 +90,8 @@ Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn, xgboost
 
 📈 Future Work
 
-Hyperparameter tuning with RandomizedSearchCV / Optuna
+Hyperparameter tuning with RandomizedSearchCV or Optuna
 
-Add SHAP/Permutation importance for feature explainability
+Feature importance & SHAP for interpretability
 
-Deploy trained model using Streamlit or Flask API
+Model deployment using Streamlit or Flask API
